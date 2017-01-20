@@ -6,9 +6,10 @@ var sequelize=new Sequelize(undefined,undefined,undefined,{
 
 var db={};
 
-db.todo=sequelize.import(__dirname+'/models/todo.js');
-db.user=sequelize.import(__dirname+'/models/user.js');
-db.sequelize=sequelize;
-db.Sequelize=Sequelize; 
+db.todo = sequelize.import(__dirname+'/models/todo.js');
+db.user = sequelize.import(__dirname+'/models/user.js');
 
-module.exports=db;
+db.sequelize = sequelize;
+db.Sequelize = Sequelize; 
+
+module.exports = db;
